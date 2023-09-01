@@ -1,10 +1,31 @@
-- 👋 Hi, I’m @Yunicxx
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+# Random Scirpt
 
-<!---
-Yunicxx/Yunicxx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+This is a brief description of my project.
+
+## Features
+
+- Feature : Partesp Changer
+
+## Exploit
+
+To Exploit my **Part Esp** script, follow these steps:
+
+1. local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/goofyclown/carrotEsp/main/esp.lua"))() - `This link is very important`
+2. -- config
+   
+  ESP.Players = false `do not replace`
+
+  ESP.Boxes = false `if you want to activate esp boxes you can replace it with the word true`
+
+  ESP.Names = true `so does this one`
+
+  ESP.Toggle(true)
+
+
+
+## Usage
+
+Here's how you can use this project:
+
+```bash
+$ npm start
