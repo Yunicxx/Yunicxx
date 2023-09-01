@@ -8,10 +8,10 @@ ESP.Names = true
 ESP.Toggle(true)
 
 -- object
-ESP:AddObjectListener(workspace.House, {
-    Name = "Bone",
-    CustomName = "Bone",
+ESP:AddObjectListener(workspace., {
+    Name = "",
+    CustomName = "",
     Color = Color3.fromRGB(255, 255, 255),
-    IsEnabled = "Home"
+    IsEnabled = ""
 })
-ESP.Home = true
+ESP. = true
