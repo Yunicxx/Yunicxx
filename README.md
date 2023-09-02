@@ -23,5 +23,5 @@ To Exploit my **Part Esp** script, follow these steps:
 
 
 
-## Usage
+## My Personal
 ![Thread](https://cdn.discordapp.com/attachments/1130926366347493507/1147498470404526212/R._Konten_Ucapan_Hari_Pramuka_2023.png)
