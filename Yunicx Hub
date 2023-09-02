@@ -1,0 +1,113 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({ Name = "Specter Hub", HidePremium = false, IntroText = "Yunicx Hub", SaveConfig = true, ConfigFolder = "Yunicx Hub" })
+
+OrionLib:MakeNotification({
+    Name = "Welcome",
+    Content = "Thanks for using my script!",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+local TutTab = Window:MakeTab({
+    Name = "ESP",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+    Name = "Section"
+})
+
+TutTab:AddButton({
+    Name = "Ghost ESP",
+    Callback = function()
+        local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+
+        ESP.Players = false
+        ESP.Boxes = true
+        ESP.Names = true
+        ESP:Toggle(true)
+
+        ESP:AddObjectListener(workspace.GhostModel, {
+            Name = "Base",
+            CustomName = "Ghost",
+            Color = Color3.fromRGB(255, 0, 0),
+            IsEnabled = "GhostON"
+        })
+        ESP.GhostON = true
+        print("Button1")
+    end
+})
+
+TutTab:AddButton({
+    Name = "Bone ESP",
+    Callback = function()
+        local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+
+        ESP.Players = false
+        ESP.Boxes = false
+        ESP.Names = true
+        ESP:Toggle(true)
+
+        ESP:AddObjectListener(workspace.House, {
+            Name = "Bone",
+            CustomName = "Bone",
+            Color = Color3.fromRGB(255, 234, 0),
+            IsEnabled = "BoneON"
+        })
+        ESP.BoneON = true
+        print("Button2")
+    end
+})
+
+TutTab:AddButton({
+    Name = "Full Bright",
+    Callback = function()
+        local Light = game:GetService("Lighting")
+
+        function dofullbright()
+            Light.Ambient = Color3.new(1, 1, 1)
+            Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+            Light.ColorShift_Top = Color3.new(1, 1, 1)
+        end
+
+        dofullbright()
+
+        Light.LightingChanged:Connect(dofullbright)
+        print("Button3")
+    end
+})
+
+local isPlayerESPEnabled = false
+
+local function togglePlayerESP()
+    isPlayerESPEnabled = not isPlayerESPEnabled
+    local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+    
+    ESP.Players = isPlayerESPEnabled
+    ESP:Toggle(isPlayerESPEnabled)
+end
+
+local PlayerESPButton = TutTab:AddButton({
+    Name = "Toggle Player ESP",
+    Callback = function()
+        togglePlayerESP()
+        if isPlayerESPEnabled then
+            PlayerESPButton:SetName("Player ESP ON")
+        else
+            PlayerESPButton:SetName("Player ESP OFF")
+        end
+    end
+})
+
+PlayerESPButton:SetName(isPlayerESPEnabled and "Player ESP ON" or "Player ESP OFF")
+
+local function teleportToPart(part)
+    local character = game.Players.LocalPlayer.Character
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local rootPart = character.HumanoidRootPart
+        rootPart.CFrame = part.CFrame
+    end
+end
+
+OrionLib:Init()
