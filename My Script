@@ -1,0 +1,649 @@
+-- grabbed ui from this game plz dont bully me https://www.roblox.com/games/4805524048
+for i, v in pairs(game.CoreGui:GetChildren()) do
+    if v.Name == "MusicGui" and v.ClassName == "ScreenGui" then
+        v:Destroy()
+    end
+end
+local MusicGui = Instance.new("ScreenGui")
+local MusicGUI = Instance.new("Frame")
+local Music = Instance.new("Folder")
+
+local ID1 = Instance.new("Folder")
+local artist1 = Instance.new("StringValue", ID1)
+artist1.Value = "Mittens"
+local song1 = Instance.new("StringValue", ID1)
+song1.Value = 9044564552
+local name1 = Instance.new("StringValue", ID1)
+name1.Value = "It s Over"
+
+local ID2 = Instance.new("Folder")
+local artist2 = Instance.new("StringValue", ID2)
+artist2.Value = "Jinsang"
+local song2 = Instance.new("StringValue", ID2)
+song2.Value = 9044564552
+local name2 = Instance.new("StringValue", ID2)
+name2.Value = "Hawaii"
+
+local ID3 = Instance.new("Folder")
+local artist3 = Instance.new("StringValue", ID3)
+artist3.Value = "datfootdive"
+local song3 = Instance.new("StringValue", ID3)
+song3.Value = 9044564552
+local name3 = Instance.new("StringValue", ID3)
+name3.Value = "since when"
+
+local ID4 = Instance.new("Folder")
+local artist4 = Instance.new("StringValue", ID4)
+artist4.Value = "N/A"
+local song4 = Instance.new("StringValue", ID4)
+song4.Value = 9044564552
+local name4 = Instance.new("StringValue", ID4)
+name4.Value = "Vaporwave"
+
+local ID5 = Instance.new("Folder")
+local artist5 = Instance.new("StringValue", ID5)
+artist5.Value = "datfootdive学生"
+local song5 = Instance.new("StringValue", ID5)
+song5.Value = 9044564552
+local name5 = Instance.new("StringValue", ID5)
+name5.Value = "”ｓｔａｙ”"
+
+local ID6 = Instance.new("Folder")
+local artist6 = Instance.new("StringValue", ID6)
+artist6.Value = "datfootdive"
+local song6 = Instance.new("StringValue", ID6)
+song6.Value = 9044564552
+local name6 = Instance.new("StringValue", ID6)
+name6.Value = "iris"
+
+local ID7 = Instance.new("Folder")
+local artist7 = Instance.new("StringValue", ID7)
+artist7.Value = "sweetbn _"
+local song7 = Instance.new("StringValue", ID7)
+song7.Value = 9044564552
+local name7 = Instance.new("StringValue", ID7)
+name7.Value = "i love yo"
+
+local ID8 = Instance.new("Folder")
+local artist8 = Instance.new("StringValue", ID8)
+artist8.Value = "N/A"
+local song8 = Instance.new("StringValue", ID8)
+song8.Value = 9044564552
+local name8 = Instance.new("StringValue", ID8)
+name8.Value = "Lofi"
+
+local ID9 = Instance.new("Folder")
+local artist9 = Instance.new("StringValue", ID9)
+artist9.Value = "Lofi"
+local song9 = Instance.new("StringValue", ID9)
+song9.Value = 9044564552
+local name9 = Instance.new("StringValue", ID9)
+name9.Value = "Love hurt"
+
+local ID10 = Instance.new("Folder")
+local artist10 = Instance.new("StringValue", ID10)
+artist10.Value = "Lofi"
+local song10 = Instance.new("StringValue", ID10)
+song10.Value = 9044564552
+local name10 = Instance.new("StringValue", ID10)
+name10.Value = "Sad"
+
+local ID11 = Instance.new("Folder")
+local artist11 = Instance.new("StringValue", ID11)
+artist11.Value = "Lofi"
+local song11 = Instance.new("StringValue", ID11)
+song11.Value = 9044564552
+local name11 = Instance.new("StringValue", ID11)
+name11.Value = "This girl"
+
+
+artist1.Name = "Artist"
+song1.Name = "Song"
+name1.Name = "SongName"
+
+artist2.Name = "Artist"
+song2.Name = "Song"
+name2.Name = "SongName"
+
+artist3.Name = "Artist"
+song3.Name = "Song"
+name3.Name = "SongName"
+
+artist4.Name = "Artist"
+song4.Name = "Song"
+name4.Name = "SongName"
+
+artist5.Name = "Artist"
+song5.Name = "Song"
+name5.Name = "SongName"
+
+artist6.Name = "Artist"
+song6.Name = "Song"
+name6.Name = "SongName"
+
+artist7.Name = "Artist"
+song7.Name = "Song"
+name7.Name = "SongName"
+
+artist8.Name = "Artist"
+song8.Name = "Song"
+name8.Name = "SongName"
+
+artist9.Name = "Artist"
+song9.Name = "Song"
+name9.Name = "SongName"
+
+artist10.Name = "Artist"
+song10.Name = "Song"
+name10.Name = "SongName"
+
+artist11.Name = "Artist"
+song11.Name = "Song"
+name11.Name = "SongName"
+
+
+
+
+
+
+local MainBoard = Instance.new("Frame")
+local Mainframe = Instance.new("Frame")
+local Detail = Instance.new("TextLabel")
+local Detail_2 = Instance.new("Frame")
+local ArtistName = Instance.new("TextLabel")
+local SongName = Instance.new("TextLabel")
+local Mute = Instance.new("TextButton")
+local EqualizerBoard = Instance.new("Frame")
+local Song = Instance.new("Sound", EqualizerBoard)
+Song.Name = "Song"
+Song.Volume = 0.1
+Song.Looped = false
+Song.Playing = false
+local EqualizerSoundEffect = Instance.new("EqualizerSoundEffect", Song)
+EqualizerSoundEffect.Enabled = true
+EqualizerSoundEffect.HighGain = 10
+EqualizerSoundEffect.LowGain = 7
+EqualizerSoundEffect.MidGain = 5
+EqualizerSoundEffect.Priority = 15
+
+local PlaybackLoudness = Instance.new("NumberValue", EqualizerBoard)
+PlaybackLoudness.Name = "PlaybackLoudness"
+PlaybackLoudness.Value = 0
+
+local Bar1 = Instance.new("Frame")
+local Bar2 = Instance.new("Frame")
+local Bar3 = Instance.new("Frame")
+local Bar4 = Instance.new("Frame")
+local Bar5 = Instance.new("Frame")
+local Bar6 = Instance.new("Frame")
+local Bar7 = Instance.new("Frame")
+local Bar8 = Instance.new("Frame")
+local Bar9 = Instance.new("Frame")
+local Bar10 = Instance.new("Frame")
+local Bar11 = Instance.new("Frame")
+local Bar12 = Instance.new("Frame")
+local Bar13 = Instance.new("Frame")
+local Bar14 = Instance.new("Frame")
+local Bar15 = Instance.new("Frame")
+local Bar16 = Instance.new("Frame")
+local Bar17 = Instance.new("Frame")
+local Bar18 = Instance.new("Frame")
+local Bar19 = Instance.new("Frame")
+local Bar20 = Instance.new("Frame")
+local Bar21 = Instance.new("Frame")
+
+--Properties:
+
+MusicGui.Name = "MusicGui"
+MusicGui.Parent = game.CoreGui
+MusicGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MusicGui.ResetOnSpawn = false
+
+MusicGUI.Name = "MusicGUI"
+MusicGUI.Parent = MusicGui
+MusicGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MusicGUI.BackgroundTransparency = 1.000
+MusicGUI.BorderSizePixel = 0
+MusicGUI.Position = UDim2.new(0, 20, 1, -120)
+MusicGUI.Size = UDim2.new(0, 250, 0, 100)
+
+Music.Name = "Music"
+Music.Parent = MusicGUI
+
+ID1.Name = "ID1"
+ID1.Parent = Music
+
+ID2.Name = "ID2"
+ID2.Parent = Music
+
+ID3.Name = "ID3"
+ID3.Parent = Music
+
+ID4.Name = "ID4"
+ID4.Parent = Music
+
+ID5.Name = "ID5"
+ID5.Parent = Music
+
+ID6.Name = "ID6"
+ID6.Parent = Music
+
+ID7.Name = "ID7"
+ID7.Parent = Music
+
+ID8.Name = "ID8"
+ID8.Parent = Music
+
+ID9.Name = "ID9"
+ID9.Parent = Music
+
+ID10.Name = "ID10"
+ID10.Parent = Music
+
+ID11.Name = "ID11"
+ID11.Parent = Music
+
+MainBoard.Name = "MainBoard"
+MainBoard.Parent = MusicGUI
+MainBoard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainBoard.BackgroundTransparency = 1.000
+MainBoard.BorderSizePixel = 0
+MainBoard.ClipsDescendants = true
+MainBoard.Position = UDim2.new(0, 0, 0, -50)
+MainBoard.Size = UDim2.new(0, 250, 0, 150)
+
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = MainBoard
+Mainframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Mainframe.BackgroundTransparency = 0.800
+Mainframe.BorderSizePixel = 0
+Mainframe.ClipsDescendants = true
+Mainframe.Position = UDim2.new(0, -300, 0, 75)
+Mainframe.Size = UDim2.new(0, 250, 0, 75)
+
+Detail.Name = "Detail"
+Detail.Parent = Mainframe
+Detail.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Detail.BackgroundTransparency = 1.000
+Detail.BorderSizePixel = 0
+Detail.Position = UDim2.new(0, 5, 0, 5)
+Detail.Size = UDim2.new(0, 240, 0, 10)
+Detail.Font = Enum.Font.GothamBold
+Detail.Text = "CURRENTLY PLAYING"
+Detail.TextColor3 = Color3.fromRGB(255, 255, 255)
+Detail.TextScaled = true
+Detail.TextSize = 14.000
+Detail.TextWrapped = true
+Detail.TextXAlignment = Enum.TextXAlignment.Left
+
+Detail_2.Name = "Detail"
+Detail_2.Parent = Mainframe
+Detail_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Detail_2.BackgroundTransparency = 0.500
+Detail_2.BorderSizePixel = 0
+Detail_2.Position = UDim2.new(0, 5, 0, 20)
+Detail_2.Size = UDim2.new(0, 200, 0, 1)
+
+ArtistName.Name = "ArtistName"
+ArtistName.Parent = Mainframe
+ArtistName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ArtistName.BackgroundTransparency = 1.000
+ArtistName.BorderSizePixel = 0
+ArtistName.Position = UDim2.new(0, 5, 0, 20)
+ArtistName.Size = UDim2.new(0, 200, 0, 35)
+ArtistName.Font = Enum.Font.GothamBold
+ArtistName.Text = "CUPSHAKKE"
+ArtistName.TextColor3 = Color3.fromRGB(255, 255, 255)
+ArtistName.TextScaled = true
+ArtistName.TextSize = 14.000
+ArtistName.TextWrapped = true
+ArtistName.TextXAlignment = Enum.TextXAlignment.Left
+ArtistName.TextYAlignment = Enum.TextYAlignment.Bottom
+
+SongName.Name = "SongName"
+SongName.Parent = Mainframe
+SongName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SongName.BackgroundTransparency = 1.000
+SongName.BorderSizePixel = 0
+SongName.Position = UDim2.new(0, 5, 0, 56)
+SongName.Size = UDim2.new(0, 240, 0, 14)
+SongName.Font = Enum.Font.SourceSans
+SongName.Text = "SLAPPADDOO"
+SongName.TextColor3 = Color3.fromRGB(255, 255, 255)
+SongName.TextScaled = true
+SongName.TextSize = 14.000
+SongName.TextWrapped = true
+SongName.TextXAlignment = Enum.TextXAlignment.Left
+SongName.TextYAlignment = Enum.TextYAlignment.Top
+
+Mute.Name = "Mute"
+Mute.Parent = Mainframe
+Mute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mute.BorderSizePixel = 0
+Mute.Position = UDim2.new(0, 145, 0, 5)
+Mute.Size = UDim2.new(0, 100, 0, 10)
+Mute.Font = Enum.Font.GothamBold
+Mute.Text = "MUTE MUSIC"
+Mute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Mute.TextScaled = true
+Mute.TextSize = 14.000
+Mute.TextWrapped = true
+
+EqualizerBoard.Name = "EqualizerBoard"
+EqualizerBoard.Parent = MainBoard
+EqualizerBoard.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+EqualizerBoard.BackgroundTransparency = 1.000
+EqualizerBoard.BorderColor3 = Color3.fromRGB(16, 16, 16)
+EqualizerBoard.Position = UDim2.new(0, 0, 0, 76)
+EqualizerBoard.Size = UDim2.new(0, 250, 0, 1)
+EqualizerBoard.SizeConstraint = Enum.SizeConstraint.RelativeXX
+EqualizerBoard.ZIndex = 0
+
+Bar1.Name = "Bar1"
+Bar1.Parent = EqualizerBoard
+Bar1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar1.BackgroundTransparency = 0.500
+Bar1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar1.BorderSizePixel = 0
+Bar1.Position = UDim2.new(0, 0, 0, -3)
+Bar1.Size = UDim2.new(0, 10, 0, 0)
+
+Bar2.Name = "Bar2"
+Bar2.Parent = EqualizerBoard
+Bar2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar2.BackgroundTransparency = 0.500
+Bar2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar2.BorderSizePixel = 0
+Bar2.Position = UDim2.new(0, 12, 0, -3)
+Bar2.Size = UDim2.new(0, 10, 0, 0)
+
+Bar3.Name = "Bar3"
+Bar3.Parent = EqualizerBoard
+Bar3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar3.BackgroundTransparency = 0.500
+Bar3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar3.BorderSizePixel = 0
+Bar3.Position = UDim2.new(0, 24, 0, -3)
+Bar3.Size = UDim2.new(0, 10, 0, 0)
+
+Bar4.Name = "Bar4"
+Bar4.Parent = EqualizerBoard
+Bar4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar4.BackgroundTransparency = 0.500
+Bar4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar4.BorderSizePixel = 0
+Bar4.Position = UDim2.new(0, 36, 0, -3)
+Bar4.Size = UDim2.new(0, 10, 0, 0)
+
+Bar5.Name = "Bar5"
+Bar5.Parent = EqualizerBoard
+Bar5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar5.BackgroundTransparency = 0.500
+Bar5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar5.BorderSizePixel = 0
+Bar5.Position = UDim2.new(0, 48, 0, -3)
+Bar5.Size = UDim2.new(0, 10, 0, 0)
+
+Bar6.Name = "Bar6"
+Bar6.Parent = EqualizerBoard
+Bar6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar6.BackgroundTransparency = 0.500
+Bar6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar6.BorderSizePixel = 0
+Bar6.Position = UDim2.new(0, 60, 0, -3)
+Bar6.Size = UDim2.new(0, 10, 0, 0)
+
+Bar7.Name = "Bar7"
+Bar7.Parent = EqualizerBoard
+Bar7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar7.BackgroundTransparency = 0.500
+Bar7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar7.BorderSizePixel = 0
+Bar7.Position = UDim2.new(0, 72, 0, -3)
+Bar7.Size = UDim2.new(0, 10, 0, 0)
+
+Bar8.Name = "Bar8"
+Bar8.Parent = EqualizerBoard
+Bar8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar8.BackgroundTransparency = 0.500
+Bar8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar8.BorderSizePixel = 0
+Bar8.Position = UDim2.new(0, 84, 0, -3)
+Bar8.Size = UDim2.new(0, 10, 0, 0)
+
+Bar9.Name = "Bar9"
+Bar9.Parent = EqualizerBoard
+Bar9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar9.BackgroundTransparency = 0.500
+Bar9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar9.BorderSizePixel = 0
+Bar9.Position = UDim2.new(0, 96, 0, -3)
+Bar9.Size = UDim2.new(0, 10, 0, 0)
+
+Bar10.Name = "Bar10"
+Bar10.Parent = EqualizerBoard
+Bar10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar10.BackgroundTransparency = 0.500
+Bar10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar10.BorderSizePixel = 0
+Bar10.Position = UDim2.new(0, 108, 0, -3)
+Bar10.Size = UDim2.new(0, 10, 0, 0)
+
+Bar11.Name = "Bar11"
+Bar11.Parent = EqualizerBoard
+Bar11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar11.BackgroundTransparency = 0.500
+Bar11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar11.BorderSizePixel = 0
+Bar11.Position = UDim2.new(0, 120, 0, -3)
+Bar11.Size = UDim2.new(0, 10, 0, 0)
+
+Bar12.Name = "Bar12"
+Bar12.Parent = EqualizerBoard
+Bar12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar12.BackgroundTransparency = 0.500
+Bar12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar12.BorderSizePixel = 0
+Bar12.Position = UDim2.new(0, 132, 0, -3)
+Bar12.Size = UDim2.new(0, 10, 0, 0)
+
+Bar13.Name = "Bar13"
+Bar13.Parent = EqualizerBoard
+Bar13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar13.BackgroundTransparency = 0.500
+Bar13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar13.BorderSizePixel = 0
+Bar13.Position = UDim2.new(0, 144, 0, -3)
+Bar13.Size = UDim2.new(0, 10, 0, 0)
+
+Bar14.Name = "Bar14"
+Bar14.Parent = EqualizerBoard
+Bar14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar14.BackgroundTransparency = 0.500
+Bar14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar14.BorderSizePixel = 0
+Bar14.Position = UDim2.new(0, 156, 0, -3)
+Bar14.Size = UDim2.new(0, 10, 0, 0)
+
+Bar15.Name = "Bar15"
+Bar15.Parent = EqualizerBoard
+Bar15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar15.BackgroundTransparency = 0.500
+Bar15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar15.BorderSizePixel = 0
+Bar15.Position = UDim2.new(0, 168, 0, -3)
+Bar15.Size = UDim2.new(0, 10, 0, 0)
+
+Bar16.Name = "Bar16"
+Bar16.Parent = EqualizerBoard
+Bar16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar16.BackgroundTransparency = 0.500
+Bar16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar16.BorderSizePixel = 0
+Bar16.Position = UDim2.new(0, 180, 0, -3)
+Bar16.Size = UDim2.new(0, 10, 0, 0)
+
+Bar17.Name = "Bar17"
+Bar17.Parent = EqualizerBoard
+Bar17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar17.BackgroundTransparency = 0.500
+Bar17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar17.BorderSizePixel = 0
+Bar17.Position = UDim2.new(0, 192, 0, -3)
+Bar17.Size = UDim2.new(0, 10, 0, 0)
+
+Bar18.Name = "Bar18"
+Bar18.Parent = EqualizerBoard
+Bar18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar18.BackgroundTransparency = 0.500
+Bar18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar18.BorderSizePixel = 0
+Bar18.Position = UDim2.new(0, 204, 0, -3)
+Bar18.Size = UDim2.new(0, 10, 0, 0)
+
+Bar19.Name = "Bar19"
+Bar19.Parent = EqualizerBoard
+Bar19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar19.BackgroundTransparency = 0.500
+Bar19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar19.BorderSizePixel = 0
+Bar19.Position = UDim2.new(0, 216, 0, -3)
+Bar19.Size = UDim2.new(0, 10, 0, 0)
+
+Bar20.Name = "Bar20"
+Bar20.Parent = EqualizerBoard
+Bar20.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar20.BackgroundTransparency = 0.500
+Bar20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar20.BorderSizePixel = 0
+Bar20.Position = UDim2.new(0, 228, 0, -3)
+Bar20.Size = UDim2.new(0, 10, 0, 0)
+
+Bar21.Name = "Bar21"
+Bar21.Parent = EqualizerBoard
+Bar21.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar21.BackgroundTransparency = 0.500
+Bar21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar21.BorderSizePixel = 0
+Bar21.Position = UDim2.new(0, 240, 0, -3)
+Bar21.Size = UDim2.new(0, 10, 0, 0)
+
+-- Scripts:
+
+local function ZWIMN_fake_script() -- MusicGUI.New 
+	local script = Instance.new('LocalScript', MusicGUI)
+
+	Equalizer = script.Parent.MainBoard.EqualizerBoard;
+	Artist = script.Parent.MainBoard.Mainframe.ArtistName;
+	Name = script.Parent.MainBoard.Mainframe.SongName;
+	MusicStorage = script.Parent.Music;
+	Song = script.Parent.MainBoard.EqualizerBoard.Song;
+	local u1 = 0;
+	function CheckNumber(p1)
+		if p1 == u1 then
+			return false;
+		end;
+		u1 = p1;
+		return true;
+	end;
+	local u2 = 0;
+	local l__Mainframe__3 = script.Parent.MainBoard.Mainframe;
+	function PlaySong()
+		wait(3);
+		while true do
+			if wait() then
+	
+			else
+				break;
+			end;
+			u2 = math.random(1, 11);
+			if CheckNumber(u2) ~= true then
+	
+			else
+				break;
+			end;	
+		end;
+		Song.SoundId = "rbxassetid://" .. MusicStorage["ID" .. u2].Song.Value;
+		Artist.Text = MusicStorage["ID" .. u2].Artist.Value;
+		Name.Text = MusicStorage["ID" .. u2].SongName.Value;
+		l__Mainframe__3:TweenPosition(UDim2.new(0, 0, 0, 75), "Out", "Quart", 1, true);
+		Song:Play();
+	end;
+	Song.Ended:connect(function()
+		for v1, v2 in pairs(Equalizer:GetChildren()) do
+			if v2:IsA("Frame") then
+				v2:TweenSize(UDim2.new(0, 15, 0, 0), "Out", "Quad", 0.1, true);
+			end;
+		end;
+		l__Mainframe__3:TweenPosition(UDim2.new(0, -300, 0, 75), "In", "Quart", 1, true);
+		wait(1.5);
+		PlaySong();
+	end);
+	Song.Stopped:connect(function()
+		for v3, v4 in pairs(Equalizer:GetChildren()) do
+			if v4:IsA("Frame") then
+				v4:TweenSize(UDim2.new(0, 15, 0, 0), "Out", "Quad", 1, true);
+			end;
+		end;
+		l__Mainframe__3:TweenPosition(UDim2.new(0, -300, 0, 75), "In", "Quart", 1, true);
+		wait(1.5);
+		PlaySong();
+	end);
+	game.Players.LocalPlayer.Chatted:connect(function(p2)
+		if string.lower(p2) == "/e skip" then
+			Song:Stop();
+		end;
+	end);
+	PlaySong();
+	
+end
+coroutine.wrap(ZWIMN_fake_script)()
+local function MRZNVNV_fake_script() -- Mute.real 
+	local script = Instance.new('LocalScript', Mute)
+
+	wait();
+	local u1 = true;
+	local l__Parent__2 = script.Parent;
+	function action()
+		if u1 then
+			l__Parent__2.Parent.Parent.EqualizerBoard.Song.Volume = 0;
+			l__Parent__2.Text = "UNMUTE MUSIC";
+			u1 = false;
+			return;
+		end;
+		l__Parent__2.Parent.Parent.EqualizerBoard.Song.Volume = 0.1;
+		l__Parent__2.Text = "MUTE MUSIC";
+		u1 = true;
+	end;
+	l__Parent__2.MouseButton1Down:connect(action);
+	
+end
+coroutine.wrap(MRZNVNV_fake_script)()
+
+
+local function AOIDS_fake_script() -- EqualizerBoard.LocalScript 
+	local script = Instance.new('LocalScript', EqualizerBoard)
+
+	script.Parent.PlaybackLoudness.Changed:connect(function(p1)
+		wait();
+		local v1 = {};
+		for v2 = 1, 21 do
+			v1[v2] = script.Parent:FindFirstChild("Bar" .. v2);
+		end;
+		for v3 = 21, 2, -1 do
+			v1[v3].Size = v1[v3 - 1].Size;
+		end;
+		v1[1].Size = UDim2.new(0.035, 0, 0, p1 / 7 * -1);
+	end);
+end
+coroutine.wrap(AOIDS_fake_script)()
+
+
+
+local function QWERT_fake_script() -- Song.LocalScript
+    local script = Instance.new('LocalScript', Song)
+    while wait() do
+	script.Parent.Parent.PlaybackLoudness.Value = script.Parent.PlaybackLoudness;
+end;
+end
+coroutine.wrap(QWERT_fake_script)(
